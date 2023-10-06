@@ -4,7 +4,7 @@ import { NavLink } from "react-router-dom";
 export default function Navbar() {
     return (
         <>
-            <nav className="container h-20 flex items-center justify-between mx-5">
+            <nav className="container h-20 flex items-center justify-between">
                 {/* search */}
                 <form className="max-w-sm px-4 hidden lg:block">
                     <div className="relative">
@@ -68,19 +68,19 @@ export default function Navbar() {
             </nav>
 
             <div className=" items-center w-2/3 justify-between mx-10 hidden lg:flex md:mx-auto">
-                <NavLink to="/home">
+                <NavLink to="/">
                     Home
                 </NavLink>
-                <NavLink to="/home">
+                <NavLink to="/mahkota">
                     Mahkota
                 </NavLink>
-                <NavLink to="/home">
+                <NavLink to="/hairpiece">
                     Hairpiece
                 </NavLink>
-                <NavLink to="/home">
+                <NavLink to="/headpiece">
                     Headpiece
                 </NavLink>
-                <NavLink to="/home">
+                <NavLink to="/allproducts">
                     All products
                 </NavLink>
             </div>
