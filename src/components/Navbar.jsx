@@ -3,8 +3,7 @@ import { NavLink } from "react-router-dom";
 
 export default function Navbar() {
     return (
-      <nav className=" h-20 flex items-center justify-between">
-  
+      <nav className="container h-20 flex items-center justify-between ">
   
         {/* search */}
         <form className="max-w-sm px-4">
@@ -25,7 +24,7 @@ export default function Navbar() {
             </svg>
             <input
               type="text"
-              placeholder="Search"
+              placeholder="Cari produk"
               className="w-full py-3 pl-12 pr-4 text-gray-500 border rounded-[12px] outline-none bg-gray-50 focus:bg-white focus:border-indigo-600"
             />
           </div>
