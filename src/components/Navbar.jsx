@@ -1,12 +1,38 @@
 import { NavLink } from "react-router-dom";
+import LogoAnnikmah from "./../assets/logo an-nikmah.png"
+import { useState } from "react";
+import Sidebar from "./Sidebar";
 
 
-export default function Navbar() {
+export default function Navbar({ toggleSidebar }) {
+
+
     return (
+
         <>
-            <nav className="container h-20 flex items-center justify-between mb-10">
+            <nav className="container h-20 flex items-center justify-between mb-10 px-3">
+                {/* toggler button */}
+                <button className="lg:hidden relative" onClick={() => { toggleSidebar() }}>
+                    <svg
+                        width={30}
+                        height={30}
+                        viewBox="0 0 30 30"
+                        fill="none"
+                        xmlns="http://www.w3.org/2000/svg"
+                    >
+                        <path
+                            d="M3 3H27M3 15H27M3 27H27"
+                            stroke="#222222"
+                            strokeWidth={5}
+                            strokeLinecap="round"
+                            strokeLinejoin="round"
+                        />
+                    </svg>
+
+                </button>
+
                 {/* search */}
-                <form className="max-w-sm px-4 hidden lg:block">
+                <form className="max-w-sm px-4 hidden lg:block z">
                     <div className="relative">
                         <svg
                             xmlns="http://www.w3.org/2000/svg"
@@ -32,11 +58,7 @@ export default function Navbar() {
 
                 {/* logo */}
                 <NavLink to="/">
-
-                    <svg width="91" height="10" viewBox="0 0 91 10" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <path d="M0.883 9.73685L4.939 0.636846H7.019L11.088 9.73685H8.878L5.55 1.70285H6.382L3.041 9.73685H0.883ZM2.911 7.78685L3.47 6.18785H8.15L8.722 7.78685H2.911ZM12.0321 9.73685V0.636846H13.7741L19.1431 7.18885H18.2981V0.636846H20.3781V9.73685H18.6491L13.2671 3.18485H14.1121V9.73685H12.0321ZM25.8098 6.88985V5.26485H29.4888V6.88985H25.8098ZM34.9091 9.73685V0.636846H36.6511L42.0201 7.18885H41.1751V0.636846H43.2551V9.73685H41.5261L36.1441 3.18485H36.9891V9.73685H34.9091ZM45.4081 9.73685V0.636846H47.5141V9.73685H45.4081ZM51.5587 7.65685L51.4417 5.22585L55.7967 0.636846H58.1367L54.2107 4.86185L53.0407 6.10985L51.5587 7.65685ZM49.6737 9.73685V0.636846H51.7667V9.73685H49.6737ZM55.9007 9.73685L52.6637 5.77185L54.0417 4.27685L58.3577 9.73685H55.9007ZM59.2968 9.73685V0.636846H61.0388L64.9128 7.05885H63.9898L67.7988 0.636846H69.5278L69.5538 9.73685H67.5778L67.5648 3.66585H67.9288L64.8868 8.77485H63.9378L60.8308 3.66585H61.2728V9.73685H59.2968ZM70.5168 9.73685L74.5728 0.636846H76.6528L80.7218 9.73685H78.5118L75.1838 1.70285H76.0158L72.6748 9.73685H70.5168ZM72.5448 7.78685L73.1038 6.18785H77.7838L78.3558 7.78685H72.5448ZM87.9059 0.636846H90.0119V9.73685H87.9059V0.636846ZM83.7719 9.73685H81.6659V0.636846H83.7719V9.73685ZM88.0619 6.00585H83.6159V4.22485H88.0619V6.00585Z" fill="black" />
-                    </svg>
-
+                    <img src={LogoAnnikmah} style={{ height: 36 }} alt="" />
                 </NavLink>
 
                 {/* icon */}
@@ -68,19 +90,19 @@ export default function Navbar() {
             </nav>
 
             <div className=" items-center w-2/3 justify-between mx-10 hidden lg:flex md:mx-auto mb-10">
-                <NavLink to="/" className={'text-xl font-bold'}>
+                <NavLink to="/" className={'text-xl font-bold hover:underline hover:animate-pulse'}>
                     Home
                 </NavLink>
-                <NavLink to="/mahkota" className={'text-xl font-bold'}>
+                <NavLink to="/mahkota" className={'text-xl font-bold hover:underline hover:animate-pulse'}>
                     Mahkota
                 </NavLink>
-                <NavLink to="/hairpiece" className={'text-xl font-bold'}>
+                <NavLink to="/hairpiece" className={'text-xl font-bold hover:underline hover:animate-pulse'}>
                     Hairpiece
                 </NavLink>
-                <NavLink to="/headpiece" className={'text-xl font-bold'}>
+                <NavLink to="/headpiece" className={'text-xl font-bold hover:underline hover:animate-pulse'}>
                     Headpiece
                 </NavLink>
-                <NavLink to="/allproducts" className={'text-xl font-bold'}>
+                <NavLink to="/allproducts" className={'text-xl font-bold hover:underline hover:animate-pulse'}>
                     All products
                 </NavLink>
             </div>
