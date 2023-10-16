@@ -8,6 +8,8 @@ import Navbar from './components/Navbar';
 import Sidebar from './components/Sidebar';
 import { useState } from 'react';
 import Footer from './components/Footer';
+import Login from './pages/login';
+import Register from './pages/Register';
 
 export default function App() {
   // SIDEBAR FIRST STEP : buat kondisi useState, beri nilai false, kemudian buat komponen Sidebar
@@ -31,6 +33,8 @@ const toggleSidebar = () => {
         <Route path='/hairpiece' element={<Hairpiece />} />
         <Route path='/headpiece' element={<Headpiece />} />
         <Route path='/allproducts' element={<Allproducts />} />
+        <Route path='/login' element={<Login />} />
+        <Route path='/register' element={<Register />} />
       </Routes>
       <Footer/>
     </div>

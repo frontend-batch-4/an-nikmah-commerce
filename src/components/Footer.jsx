@@ -14,12 +14,12 @@ export default function Footer() {
                     <h1 className="text-xl max-w-md md:w-full text-center font-bold mb-5 md:mb-10">SUBSCRIBE TO OUR NEWSLETTER</h1>
                     <p className="w-2/3 text-center mb-5 md:mb-10">Promotions, new products and sales. Directly to your inbox.</p>
 
-                    <div className="flex justify-center w-full max-w-sm md:max-w-6xl mb-5 md:mb-10">
-                        <input type="emai"
+                    <div className="flex justify-center w-full max-w-sm md:max-w-full mb-5 md:mb-10">
+                        <input type="email"
                             placeholder="Your email"
-                            className="max-w-md md:max-full w-1/2 py-3 pl-4 md:pl-10 pr-4 text-gray-500 border rounded-l-[12px] outline-none bg-gray-50 focus:bg-white focus:border-indigo-600" />
+                            className="max-w-md md:w-full w-2/3 py-3 pl-4 md:pl-10 pr-4 text-gray-500 border rounded-l-[12px] outline-none bg-gray-50 focus:bg-white focus:border-indigo-600" />
 
-                        <button className="bg-slate-200 w-1/5 rounded-r-[12px] border  focus:bg-white focus:border-indigo-600"> Send
+                        <button className="bg-slate-200 w-1/5 rounded-r-[12px] border focus:bg-white focus:border-slate-600"> Send
                         </button>
                     </div>
                 </div>
