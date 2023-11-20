@@ -6,10 +6,25 @@ export default function Sidebar({ kondisi, toggleSidebar }) {
         <>
 
             {/* SIDEBAR FOURTH STEP : buat kondisi pada class pembungkus sidebar, buat kondisi tampilan ketika true dan false */}
-            <div className={`transition-all delay-200 flex flex-col items-end p-5 md:p-10 gap-5 h-screen w-1/2 md:w-1/3 bg-slate-400 absolute z-20 lg:hidden ${kondisi ? 'top-0 left-0' : 'top-0 -left-full'}`}>
+            <div className={`transition-all delay-200 flex flex-col items-end p-5 md:p-10 gap-5 h-screen w-[200px] md:w-1/3 bg-slate-400 absolute z-20 lg:hidden ${kondisi ? 'top-0 left-0' : 'top-0 -left-full'}`}>
                 <button className="absolute left-5 top-7 md:left-8" onClick={() => toggleSidebar()}>
-                    <svg width="20" height="20" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <path d="M2 2L12 12M2 12L12 2" stroke="#222222" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" />
+                    <svg width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <svg
+                            width={14}
+                            height={14}
+                            viewBox="0 0 14 14"
+                            fill="none"
+                            xmlns="http://www.w3.org/2000/svg"
+                        >
+                            <path
+                                d="M2 2L12 12M2 12L12 2"
+                                stroke="#222222"
+                                strokeWidth="2.5"
+                                strokeLinecap="round"
+                                strokeLinejoin="round"
+                            />
+                        </svg>
+
                     </svg>
 
                 </button>

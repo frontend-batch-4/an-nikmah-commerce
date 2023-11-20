@@ -17,14 +17,14 @@ export default function Home() {
                 </div>
 
                 {/* pict */}
-                <div className='max-w-md md:w-1/2 p-5 md:p-10 lg:h-1/2 order-1 md:order-2'>
+                <div className='max-w-md md:w-1/2 p-10 md:p-15 lg:h-1/2 order-1 md:order-2'>
                     {/* <img className='' src={Img1} alt="annikmah produk" /> */}
                     <CarouselProduk />
                 </div>
             </div>
 
             {/* sample produk */}
-            <div className='flex flex-col md:flex-row md:justify-evenly items-center md:max-w-2xl lg:max-w-5xl'>
+            <div className='flex p-5 md:flex-row md:justify-evenly items-center md:max-w-2xl lg:max-w-5xl'>
                 <div className='p-5 max-w-sm relative flex flex-col'>
                     <img src={Img1} className='rounded-t-xl shadow-lg' alt="Gambar Produk"/>
                     <button className='h-16 bg-slate-200 rounded-b-xl shadow-lg hover:border hover:outline-none hover:text-slate-100 hover:delay-150 hover:shadow-2xl hover:bg-slate-400 hover: text-center text-2xl p-2'>Lihat detail</button>
@@ -33,7 +33,7 @@ export default function Home() {
                     <img src={Img1} className='rounded-t-xl shadow-lg' alt="Gambar Produk"/>
                     <button className='h-16 bg-slate-200 rounded-b-xl shadow-lg hover:border hover:outline-none hover:text-slate-100 hover:delay-150 hover:shadow-2xl hover:bg-slate-400 hover: text-center text-2xl p-2'>Lihat detail</button>
                 </div>
-                <div className='p-5 max-w-sm relative flex flex-col'>
+                <div className='hidden md:flex md:p-5 max-w-sm relative md:flex-col'>
                     <img src={Img1} className='rounded-t-xl shadow-lg' alt="Gambar Produk"/>
                     <button className='h-16 bg-slate-200 rounded-b-xl shadow-lg hover:border hover:outline-none hover:text-slate-100 hover:delay-150 hover:shadow-2xl hover:bg-slate-400 hover: text-center text-2xl p-2'>Lihat detail</button>
                 </div>

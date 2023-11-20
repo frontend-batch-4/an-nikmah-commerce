@@ -1,7 +1,9 @@
+import Pagination from './../components/Pagination';
 export default function Mahkota() {
     return (
         <>
-        <h1>Mahkota</h1>
+        <h1 className='mb-10 font-bold'>Mahkota</h1>
+        <Pagination />
         </>
     )
     

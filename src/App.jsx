@@ -10,34 +10,47 @@ import { useState } from 'react';
 import Footer from './components/Footer';
 import Login from './pages/login';
 import Register from './pages/Register';
+import Search from './components/Search';
+
 
 export default function App() {
   // SIDEBAR FIRST STEP : buat kondisi useState, beri nilai false, kemudian buat komponen Sidebar
-const [isSidebarOpen, setIsSidebarOpen] = useState(false)
+  const [isSidebarOpen, setIsSidebarOpen] = useState(false)
 
-// SIDEBAR FIFTH STEP : buat function button toggle untuk mengubah nilai useState *isSidebarOpen*), buat function mengubah nilai usestate menjadi kebalikannya
-const toggleSidebar = () => {
-  setIsSidebarOpen(!isSidebarOpen)
-}
+  //first Search
+  const [isSearchOpen, setIsSearchOpen] = useState(false)
 
+  // SIDEBAR FIFTH STEP : buat function button toggle untuk mengubah nilai useState *isSidebarOpen*), buat function mengubah nilai usestate menjadi kebalikannya
+  const toggleSidebar = () => {
+    setIsSidebarOpen(!isSidebarOpen)
+  }
+
+  const toggleSearch = () => {
+    setIsSearchOpen(!isSearchOpen)
+  }
   return (
     <>
-    <div className='flex justify-center flex-col items-center'>
-    {/* SIDEBAR SIXTH STEP : hubungkan tombol toggle di navbar ke function toggle sidebar */}
-      <Navbar toggleSidebar={toggleSidebar}/> 
-      {/* SIDEBAR SECOND STEP : hubungkan komponen dengan nilai useState */}
-      <Sidebar kondisi={isSidebarOpen} toggleSidebar={toggleSidebar}/> 
-      <Routes>
-        <Route path='/' element={<Home />} />
-        <Route path='/mahkota' element={<Mahkota />} />
-        <Route path='/hairpiece' element={<Hairpiece />} />
-        <Route path='/headpiece' element={<Headpiece />} />
-        <Route path='/allproducts' element={<Allproducts />} />
-        <Route path='/login' element={<Login />} />
-        <Route path='/register' element={<Register />} />
-      </Routes>
-      <Footer/>
-    </div>
+      <div className='flex justify-center flex-col items-center'>
+        {/* SIDEBAR SIXTH STEP : hubungkan tombol toggle di navbar ke function toggle sidebar */}
+        <Navbar toggleSidebar={toggleSidebar} toggleSearch={toggleSearch}/>
+        
+        {/* SIDEBAR SECOND STEP : hubungkan komponen dengan nilai useState */}
+        <Sidebar kondisi={isSidebarOpen} toggleSidebar={toggleSidebar} />
+
+        {/* second search step */}
+        <Search kondisi={isSearchOpen} togglesSearch={toggleSearch} />
+
+        <Routes>
+          <Route path='/' element={<Home />} />
+          <Route path='/mahkota' element={<Mahkota />} />
+          <Route path='/hairpiece' element={<Hairpiece />} />
+          <Route path='/headpiece' element={<Headpiece />} />
+          <Route path='/allproducts' element={<Allproducts />} />
+          <Route path='/login' element={<Login />} />
+          <Route path='/register' element={<Register />} />
+        </Routes>
+        <Footer />
+      </div>
     </>
   );
 }

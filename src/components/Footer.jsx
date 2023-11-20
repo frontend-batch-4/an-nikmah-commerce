@@ -17,7 +17,7 @@ export default function Footer() {
                     <div className="flex justify-center w-full max-w-sm md:max-w-full mb-5 md:mb-10">
                         <input type="email"
                             placeholder="Your email"
-                            className="max-w-md md:w-full w-2/3 py-3 pl-4 md:pl-10 pr-4 text-gray-500 border rounded-l-[12px] outline-none bg-gray-50 focus:bg-white focus:border-indigo-600" />
+                            className="max-w-md md:w-full w-2/3 py-3 pl-4 md:pl-10 pr-4 text-gray-500 border rounded-l-[12px] outline-none bg-gray-50 focus:bg-white focus:border-indigo-600"/>
 
                         <button className="bg-slate-200 w-1/5 rounded-r-[12px] border focus:bg-white focus:border-slate-600"> Send
                         </button>
