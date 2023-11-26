@@ -4,7 +4,7 @@ import Home from './pages/Home';
 import Description from './pages/Description';
 import Dashboard from './pages/Dashboard';
 import Upload from './pages/Upload';
-
+import Cart from './pages/Cart';
 
 export default function App() {
   return (
@@ -16,6 +16,7 @@ export default function App() {
         <Route path="/description" element={<Description />} />
         <Route path="/dashboard" element={<Dashboard />} />
         <Route path="/dashboard/upload" element={<Upload />} />
+        <Route path="/cart" element={<Cart />} />
       </Routes>
 
     </>
