@@ -1,5 +1,5 @@
 import { useState, useEffect } from 'react';
-export default function Allproducts() {
+export default function Bandana() {
     useEffect(() => {
         getData();
     }, []);
@@ -14,7 +14,7 @@ export default function Allproducts() {
     return (
         <>
             <div className="flex flex-wrap  gap-5 justify-center md:max-w-5xl relative mt-16">
-                {data ? data.map((item) => {
+                {data ? data.slice(0, 21).map((item) => {
                     return (
                         <div key={item.id} className='p-2 w-1/3 md:w-1/5 md:max-w-5xl bg-slate-200 flex flex-col rounded-md'>
                             <div className="aspect-h-1 aspect-w-1 w-full overflow-hidden rounded-md bg-gray-200 lg:aspect-none group-hover:opacity-75 lg:h-80">

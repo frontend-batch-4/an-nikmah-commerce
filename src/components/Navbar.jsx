@@ -98,8 +98,8 @@ export default function Navbar({ children, toggleSidebar, toggleSearch }) {
                 <NavLink to="/" className={'text-xl font-bold hover:underline hover:animate-pulse'}>
                     Home
                 </NavLink>
-                <NavLink to="/mahkota" className={'text-xl font-bold hover:underline hover:animate-pulse'}>
-                    Mahkota
+                <NavLink to="/bandana" className={'text-xl font-bold hover:underline hover:animate-pulse'}>
+                    Bandana
                 </NavLink>
                 <NavLink to="/hairpiece" className={'text-xl font-bold hover:underline hover:animate-pulse'}>
                     Hairpiece

@@ -2,7 +2,7 @@ import Navbar from "../components/Navbar";
 export default function Register() {
     return (
         <>
-            <Navbar />
+     
             <div className=" w-2/3 my-10 max-w-md md:max-w-4xl min-w-sm">
                 <form className="flex flex-col">
                     <h1 className="text-center font-bold text-3xl mb-10">Create New Account</h1>

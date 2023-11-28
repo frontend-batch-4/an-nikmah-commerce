@@ -17,7 +17,7 @@ export default function Cart() {
     return (
 
         <>
-            <Navbar />
+            
             <section className="h-screenpy-12 sm:py-16 lg:py-20">
                 <div className="mx-auto px-4 sm:px-6 lg:px-8">
                     <div className="flex items-center justify-center">

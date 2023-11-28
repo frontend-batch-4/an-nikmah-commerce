@@ -20,9 +20,9 @@ export default function Searchpage() {
 
     return (
         <>
-            <Navbar />
-            <div className="flex flex-wrap gap-5 justify-center">
-            {data ? data.map((item) => {
+         
+            <div className="flex flex-wrap relative justify-center gap-5">
+            {data ? data.slice(0, 4).map((item) => {
                     return (
                         <div key={item.id} className='p-5 max-w-sm bg-slate-100 flex flex-col'>
 

@@ -19,7 +19,7 @@ export default function Dashboard() {
     };
 
     return (
-        <>
+        <div className='absolute bg-white w-full'>
             <AdminLayout />
             <div class="p-4 sm:ml-64">
 
@@ -93,6 +93,6 @@ export default function Dashboard() {
             </div>
 
 
-        </>
+        </div>
     );
 }

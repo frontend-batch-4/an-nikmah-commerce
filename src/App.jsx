@@ -1,6 +1,6 @@
 import { Routes, Route } from 'react-router-dom'
 import Home from './pages/Home'
-import Mahkota from './pages/Mahkota';
+import Bandana from './pages/Bandana';
 import Headpiece from './pages/Headpiece';
 import Hairpiece from './pages/Hairpiece';
 import Allproducts from './pages/AllProducts';
@@ -47,7 +47,7 @@ export default function App(children) {
 
         <Routes>
           <Route path='/' element={<Home />} />
-          <Route path='/mahkota' element={<Mahkota />} />
+          <Route path='/bandana' element={<Bandana />} />
           <Route path='/hairpiece' element={<Hairpiece />} />
           <Route path='/headpiece' element={<Headpiece />} />
           <Route path='/allproducts' element={<Allproducts />} />

@@ -92,11 +92,10 @@ export default function Home() {
             <h2 className="text-2xl font-bold tracking-tight text-gray-900">Customers also purchased</h2>
 
 
-            <div className="flex gap-5 justify-center max-w-5xl relative mt-16">
+            <div className="flex flex-wrap md:flex-nowrap gap-5 justify-center md:max-w-5xl relative mt-16">
                 {data ? data.slice(0, 4).map((item) => {
                     return (
-                        <div key={item.id} className='p-5 max-w-sm bg-slate-100 flex flex-col'>
-
+                        <div key={item.id} className='p-2 w-1/3 md:max-w-5xl bg-slate-200 flex flex-col rounded-md'>
                             <div className="aspect-h-1 aspect-w-1 w-full overflow-hidden rounded-md bg-gray-200 lg:aspect-none group-hover:opacity-75 lg:h-80">
                                 <img src={item.image} alt="Front of men&#039;s Basic Tee in black." className="h-full w-full object-cover object-center lg:h-full lg:w-full" />
                             </div>
@@ -112,7 +111,6 @@ export default function Home() {
                                 </div>
                                 <p className="text-sm font-medium text-gray-900">{item.harga}</p>
                             </div>
-
                         </div>
                     )
                 }) : "loading"}
