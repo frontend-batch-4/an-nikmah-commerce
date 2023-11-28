@@ -1,7 +1,7 @@
 
 import { NavLink } from "react-router-dom"
 // SIDEBAR THIRD STEP : masukkan parameter yang berisi nilai useState (disini namanya *kondisi*) kedalam parameter props
-export default function Sidebar({ kondisi, toggleSidebar }) {
+export default function Sidebar({ children, kondisi, toggleSidebar }) {
     return (
         <>
 
@@ -59,6 +59,7 @@ export default function Sidebar({ kondisi, toggleSidebar }) {
             </div>
             <div onClick={() => toggleSidebar()} className={`transition-all delay-[220ms] flex flex-col p-10 gap-5 h-screen w-screen bg-black absolute top-0 right-0 lg:hidden ${kondisi ? 'opacity-50 z-10' : 'opacity-0 -z-10'}`}>
             </div>
+            {children}
         </>
     )
 }

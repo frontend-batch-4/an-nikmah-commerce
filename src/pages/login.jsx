@@ -1,8 +1,9 @@
 import { NavLink } from "react-router-dom"
+import Navbar from "../components/Navbar";
 export default function Login() {
     return (
         <>
-
+            <Navbar />
             <div className="w-2/3 my-10 max-w-md md:max-w-4xl min-w-sm">
                 <h1 className="text-center font-bold text-3xl mb-10">LOGIN</h1>
                 <form className="flex flex-col ">

@@ -11,9 +11,14 @@ import Footer from './components/Footer';
 import Login from './pages/login';
 import Register from './pages/Register';
 import Search from './components/Search';
+import Searchpage from './pages/Searchpage';
+import Description from './pages/Description';
+import Dashboard from './pages/Dashboard';
+import Upload from './pages/Upload';
+import Cart from './pages/Cart';
 
 
-export default function App() {
+export default function App(children) {
   // SIDEBAR FIRST STEP : buat kondisi useState, beri nilai false, kemudian buat komponen Sidebar
   const [isSidebarOpen, setIsSidebarOpen] = useState(false)
 
@@ -32,8 +37,8 @@ export default function App() {
     <>
       <div className='flex justify-center flex-col items-center'>
         {/* SIDEBAR SIXTH STEP : hubungkan tombol toggle di navbar ke function toggle sidebar */}
-        <Navbar toggleSidebar={toggleSidebar} toggleSearch={toggleSearch}/>
-        
+        <Navbar toggleSidebar={toggleSidebar} toggleSearch={toggleSearch} />
+
         {/* SIDEBAR SECOND STEP : hubungkan komponen dengan nilai useState */}
         <Sidebar kondisi={isSidebarOpen} toggleSidebar={toggleSidebar} />
 
@@ -48,6 +53,11 @@ export default function App() {
           <Route path='/allproducts' element={<Allproducts />} />
           <Route path='/login' element={<Login />} />
           <Route path='/register' element={<Register />} />
+          <Route path='/searchpage' element={<Searchpage />} />
+          <Route path="/description" element={<Description />} />
+          <Route path="/dashboard" element={<Dashboard />} />
+          <Route path="/dashboard/upload" element={<Upload />} />
+          <Route path="/cart" element={<Cart />} />
         </Routes>
         <Footer />
       </div>

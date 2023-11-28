@@ -1,9 +1,9 @@
-export default function Search({ kondisi, togglesSearch }) {
+export default function Search({ children, kondisi, togglesSearch }) {
     return (
         <>
             <div className={`transition-all delay-200 flex justify-center  items-center p-5 md:p-10 gap-5 h-[150px] w-full bg-slate-400 absolute z-20 lg:hidden ${kondisi ? 'top-0 left-0' : '-top-full'}`}>
-                
-                <form className="w-full">
+
+                <form className="w-full" action="/searchpage/" method="get">
                     <label
                         htmlFor="default-search"
                         className="mb-2 text-sm font-medium text-gray-900 sr-only dark:text-white"
@@ -30,6 +30,7 @@ export default function Search({ kondisi, togglesSearch }) {
                         </div>
                         <input
                             type="search"
+                            name="keyword"
                             id="default-search"
                             className="block w-full p-4 pl-10 text-sm text-gray-900 border border-gray-300 rounded-lg bg-gray-50 focus:ring-slate-500 focus:border-slate-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-slate-500 dark:focus:border-slate-500"
                             placeholder="Search product ..."
@@ -64,6 +65,7 @@ export default function Search({ kondisi, togglesSearch }) {
             </div>
             <div onClick={() => togglesSearch()} className={`transition-all delay-[230ms] flex flex-col p-10 gap-5 h-screen w-screen bg-black absolute bottom-0 right-0 lg:hidden ${kondisi ? 'opacity-50 z-10' : 'opacity-0 -z-10'}`}>
             </div>
+            {children}
         </>
     )
 }
