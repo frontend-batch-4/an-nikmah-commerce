@@ -1,6 +1,6 @@
 import { useLocation } from "react-router-dom";
 import { useState, useEffect } from 'react';
-import Navbar from "../components/Navbar";
+
 
 export default function Searchpage() {
     const { search } = useLocation();
@@ -20,17 +20,18 @@ export default function Searchpage() {
 
     return (
         <>
-         
-            <div className="flex flex-wrap relative justify-center gap-5">
-            {data ? data.slice(0, 4).map((item) => {
+            <h2 className="text-2xl font-bold tracking-tight text-gray-900">Result of <span className="italic">'{searchQuery}'</span>  </h2>
+
+            <div className="flex flex-wrap  gap-5 justify-center md:max-w-5xl lg:max-w-full relative mt-16">
+                {data ? data.map((item) => {
                     return (
-                        <div key={item.id} className='p-5 max-w-sm bg-slate-100 flex flex-col'>
+                        <div key={item.id} className='p-2 w-1/3 md:w-1/4 lg:w-1/5 bg-slate-200 flex flex-col rounded-md'>
 
                             <div className="aspect-h-1 aspect-w-1 w-full overflow-hidden rounded-md bg-gray-200 lg:aspect-none group-hover:opacity-75 lg:h-80">
                                 <img src={item.image} alt="Front of men&#039;s Basic Tee in black." className="h-full w-full object-cover object-center lg:h-full lg:w-full" />
                             </div>
                             <div className="mt-4 flex justify-between">
-                                <div>
+                                <div className="w-2/3">
                                     <h3 className="text-sm text-gray-700">
                                         <a href="#">
                                             <span aria-hidden="true" className="absolute inset-0"></span>

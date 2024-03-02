@@ -54,7 +54,7 @@ export default function App(children) {
           <Route path='/login' element={<Login />} />
           <Route path='/register' element={<Register />} />
           <Route path='/searchpage' element={<Searchpage />} />
-          <Route path="/description" element={<Description />} />
+          <Route path="/description/:id" element={<Description />} />
           <Route path="/dashboard" element={<Dashboard />} />
           <Route path="/dashboard/upload" element={<Upload />} />
           <Route path="/cart" element={<Cart />} />

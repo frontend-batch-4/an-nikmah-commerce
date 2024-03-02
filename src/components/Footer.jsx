@@ -1,12 +1,12 @@
 export default function Footer() {
     return (
         <>
-            <footer className="flex flex-col max-w-md md:max-w-6xl justify-center items-center">
+            <footer className="flex flex-col max-w-md md:max-w-6xl justify-center items-center mt-16">
 
                 {/* profile description */}
                 <div className="p-5 max-w-sm md:max-w-2xl lg:max-w-5xl">
                     <h1 className="text-xl font-bold mb-5">An-Nikmah Collection</h1>
-                    <p className="">Is an Indonesian fashion and accessories brand founded in 2015. We specialize in designing, manufacturing, and retailing high-quality and affordable  products for women. Our mission is to provide our customers with a wide range of stylish and comfortable and accessories that will help them feel confident and beautiful.</p>
+                    <p className="">Is an Indonesian fashion and accessories brand found in 2015. We specialize in designing, manufacturing, and retailing high-quality and affordable  products for women. Our mission is to provide our customers with a wide range of stylish and comfortable and accessories that will help them feel confident and beautiful.</p>
                 </div>
 
                 {/* Email box */}

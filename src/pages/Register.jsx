@@ -1,10 +1,45 @@
-import Navbar from "../components/Navbar";
+import { Navigate } from "react-router-dom"
+
 export default function Register() {
+
+    const handleSubmit = async (e) => {
+        e.preventDefault()
+        
+        let first_name = e.target[0].value
+        let last_name = e.target[1].value
+        let email = e.target[2].value
+        let password = e.target[3].value
+        let confirm_password = e.target[4].value
+        if (password != confirm_password) return false
+
+        const form_data = new FormData()
+        form_data.append('first_name', first_name)
+        form_data.append('last_name', last_name)
+        form_data.append('email', email)
+        form_data.append('password', password)
+        form_data.append('confirm_password', confirm_password)
+
+
+        const response = await fetch('http://127.0.0.1:5000/users/register', {
+            method: 'POST',
+            body: form_data
+        })
+        console.log(response)
+        const { message } = await response.json()
+        alert(message)
+
+        if (response.ok){
+            Navigate('/login')
+        }
+    }
+
+
+
     return (
         <>
-     
+
             <div className=" w-2/3 my-10 max-w-md md:max-w-4xl min-w-sm">
-                <form className="flex flex-col">
+                <form onSubmit={handleSubmit} className="flex flex-col">
                     <h1 className="text-center font-bold text-3xl mb-10">Create New Account</h1>
                     <div className="mb-6">
                         <label
@@ -69,14 +104,14 @@ export default function Register() {
                     </div>
                     <div className="mb-6">
                         <label
-                            htmlFor="repeat-password"
+                            htmlFor="confirm-password"
                             className="block mb-2 text-sm font-medium text-gray-900 dark:text-white"
                         >
-                            Repeat password
+                            Confirm password
                         </label>
                         <input
                             type="password"
-                            id="repeat-password"
+                            id="confirm-password"
                             placeholder="Repeat your password"
                             className="shadow-sm bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-slate-500 focus:border-slate-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-slate-500 dark:focus:border-slate-500 dark:shadow-sm-light"
                             required=""

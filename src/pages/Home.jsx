@@ -92,7 +92,7 @@ export default function Home() {
             <h2 className="text-2xl font-bold tracking-tight text-gray-900">Customers also purchased</h2>
 
 
-            <div className="flex flex-wrap md:flex-nowrap gap-5 justify-center md:max-w-5xl relative mt-16">
+            <div className="flex flex-wrap lg:flex-nowrap gap-5 justify-center md:max-w-5xl relative mt-16">
                 {data ? data.slice(0, 4).map((item) => {
                     return (
                         <div key={item.id} className='p-2 w-1/3 md:max-w-5xl bg-slate-200 flex flex-col rounded-md'>
@@ -100,7 +100,7 @@ export default function Home() {
                                 <img src={item.image} alt="Front of men&#039;s Basic Tee in black." className="h-full w-full object-cover object-center lg:h-full lg:w-full" />
                             </div>
                             <div className="mt-4 flex justify-between">
-                                <div>
+                                <div className='w-2/3'>
                                     <h3 className="text-sm text-gray-700">
                                         <a href="#">
                                             <span aria-hidden="true" className="absolute inset-0"></span>

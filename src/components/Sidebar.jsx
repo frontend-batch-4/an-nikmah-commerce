@@ -33,8 +33,8 @@ export default function Sidebar({ children, kondisi, toggleSidebar }) {
                 <NavLink to="/" onClick={() => toggleSidebar()} className={'text-xl font-semibold hover:underline md:p-5'}>
                     Home
                 </NavLink>
-                <NavLink to="/mahkota" onClick={() => toggleSidebar()} className={'text-xl font-semibold hover:underline md:p-5'}>
-                    Mahkota
+                <NavLink to="/bandana" onClick={() => toggleSidebar()} className={'text-xl font-semibold hover:underline md:p-5'}>
+                    Bandana
                 </NavLink>
                 <NavLink to="/hairpiece" onClick={() => toggleSidebar()} className={'text-xl font-semibold hover:underline md:p-5'}>
                     Hairpiece
